@@ -1,0 +1,8 @@
+Para ejecutar cada actividad se requiere entrar a la carpeta, después deben usar el programa ant
+
+ejemplo:
+
+cd CicloDeAnimacion
+ant
+
+
