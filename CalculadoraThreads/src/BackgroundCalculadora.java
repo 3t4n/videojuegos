@@ -1,6 +1,5 @@
-// Fig. 26.24: BackgroundCalculator.java
-// SwingWorker subclass for calculating Fibonacci numbers
-// in a background thread.
+package calculadora;
+
 import javax.swing.SwingWorker;
 import javax.swing.JLabel;
 import java.util.concurrent.ExecutionException;

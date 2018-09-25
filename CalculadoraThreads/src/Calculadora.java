@@ -1,6 +1,4 @@
-// Fig. 26.25: FibonacciNumbers.java
-// Using SwingWorker to perform a long calculation with 
-// results displayed in a GUI.
+package calculadora;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -1,5 +1,6 @@
 <project default="run">
-	<property name="somedir.dir" location="CicloDeAnimacion"/>
+	<property name="somedir.dir" location="CalculadoraThreads"/>
+	<echo message="${somedir.dir}" />
 	<target name="release" depends="jar"/>
 	<target name="run" depends="build, exec"/>
 	
@@ -8,7 +9,7 @@
 	</target>
 
 	<target name="build">
-		<mkdir dir="${somedir.dir}/bin/debug"/>
+		<mkdir dir="${somedir.dir}/bin/debug" />
 		<javac srcdir="${somedir.dir}/src"
 			destdir="${somedir.dir}/bin/debug"
 			debug="true"
@@ -17,7 +18,7 @@
 	</target>
 
 	<target name="exec">
-		<java classname="ciclo.Main" fork="true">
+		<java classname="calculadora.Calculadora" fork="true">
 			<classpath>
 				<pathelement location="${somedir.dir}/bin/debug" />
 			</classpath>
@@ -25,8 +26,8 @@
 	</target>
 
 	<target name="jar" depends="build">
-		<mkdir dir="bin/release" />
-		<jar destfile="bin/release/cicloAnimacion.jar" manifest="${somedir.dir}/src/ciclo/manifest">
+		<mkdir dir="${somedir.dir}/bin/release" />
+		<jar destfile="bin/release/calculadora.jar" manifest="${somedir.dir}/src/manifest">
 			<fileset dir="${somedir.dir}/bin/debug"/>
 		</jar>
 	</target>

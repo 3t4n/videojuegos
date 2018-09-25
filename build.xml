@@ -1,0 +1,15 @@
+<project name="videojuegos">
+<target name="all" depends="Calculadora,CicloAnimacion" />
+
+<target name="Calculadora">
+	<ant antfile="CalculadoraThreads/build.xml" dir="." target="run"/>
+</target>
+
+<target name="CicloAnimacion">
+	<ant antfile="CicloDeAnimacion/build.xml" dir="." target="run"/>
+</target>
+<target name="release">
+	<ant antfile="CalculadoraThreads/build.xml" dir="." target="release"/>
+	<ant antfile="CicloDeAnimacion/build.xml" dir="." target="release"/>
+</target>
+</project>

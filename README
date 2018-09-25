@@ -1,8 +1,5 @@
-Para ejecutar cada actividad se requiere entrar a la carpeta, después deben usar el programa ant
+Para compilar y ejecutar se requiere Ant https://ant.apache.org/
 
-ejemplo:
-
-cd CicloDeAnimacion
-ant
-
-
+ant -p para ver las opciones disponibles para correr
+ant release para generar los jars en bin/release
+ant clean
