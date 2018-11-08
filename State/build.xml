@@ -1,0 +1,33 @@
+<project default="run">
+	<property name="somedir.dir" location="State"/>
+	<target name="release" depends="jar"/>
+	<target name="run" depends="build, exec"/>
+	
+	<target name="clean">
+		<delete dir="${somedir.dir}/bin" quiet="true"/>
+	</target>
+
+	<target name="build">
+		<mkdir dir="${somedir.dir}/bin/debug"/>
+		<javac srcdir="${somedir.dir}/src"
+			destdir="${somedir.dir}/bin/debug"
+			debug="true"
+			includeAntRuntime="false">
+		</javac>
+	</target>
+
+	<target name="exec">
+		<java classname="State.Main" fork="true">
+			<classpath>
+				<pathelement location="${somedir.dir}/bin/debug" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="jar" depends="build">
+		<mkdir dir="bin/release" />
+		<jar destfile="bin/release/State.jar" manifest="${somedir.dir}/src/State/manifest">
+			<fileset dir="${somedir.dir}/bin/debug"/>
+		</jar>
+	</target>
+</project>

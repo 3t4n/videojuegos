@@ -1,6 +1,6 @@
-package ciclo.Screens;
+package Singleton.Screens;
 import java.awt.*;
-import ciclo.*;
+import Singleton.*;
 import java.awt.event.*;
 
 public class Game extends Screen
@@ -28,8 +28,11 @@ public class Game extends Screen
 	public void render(Graphics g)
 	{
 		g.setColor(Color.white);
-		g.fillRect(0,0,1000,1000);
+		g.fillRect(0,0,800,800);
 		g.setColor(Color.black);
-		g.fillOval(x,y,10,10);
+		g.setFont(new Font("TimesRoman", Font.PLAIN, 12));
+		g.fillOval(x,y,20,20);
+		g.drawString("Usar Space para detener la pelota, el cronómetro usa el pattern Singleton "+Global.chron.getElapsedTime(),10,20);
+		g.drawString("El input del teclado lo maneja una clase que implementa los listeners, esta clase se crea en el singleton", 10, 40);
 	}
 }

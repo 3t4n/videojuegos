@@ -7,9 +7,32 @@
 
 <target name="CicloAnimacion">
 	<ant antfile="CicloDeAnimacion/build.xml" dir="." target="run"/>
+	</target>
+	
+<target name="Singleton">
+	<ant antfile="Singleton/build.xml" dir="." target="run"/>
 </target>
+
+
+<target name="State">
+	<ant antfile="State/build.xml" dir="." target="run"/>
+</target>
+
+
+<target name="Observer">
+	<ant antfile="Observer/build.xml" dir="." target="run"/>
+</target>
+<target name="Factory">
+	<ant antfile="Factory/build.xml" dir="." target="run"/>
+</target>
+
+
 <target name="release">
 	<ant antfile="CalculadoraThreads/build.xml" dir="." target="release"/>
 	<ant antfile="CicloDeAnimacion/build.xml" dir="." target="release"/>
+	<ant antfile="State/build.xml" dir="." target="release"/>
+	<ant antfile="Singleton/build.xml" dir="." target="release"/>
+	<ant antfile="Observer/build.xml" dir="." target="release"/>
+	<ant antfile="Factory/build.xml" dir="." target="release"/>
 </target>
 </project>
